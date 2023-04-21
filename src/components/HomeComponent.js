@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Nav, Card } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import ReducersComponent from './ReductTutorial/ReducersComponent';
 
 class HomeComponent extends Component {
 
@@ -7,7 +9,17 @@ class HomeComponent extends Component {
 
     return (
       <Container className='m-0 p-0' fluid>
-            
+               <Card className='m-5'>
+               <Nav variant="tabs">
+
+                <Nav.Item>
+                    <NavLink to='/reducer-component' className='nav-link text-dark'>Reducer Component</NavLink>
+                </Nav.Item>
+
+               
+               </Nav>
+               </Card>
+
       </Container>
     )
   }
