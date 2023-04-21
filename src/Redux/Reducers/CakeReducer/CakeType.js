@@ -4,10 +4,12 @@ export const CAKE_ACTION  = {
 
 export const CakeType = {
 
-    BUY_CAKE: ()=> {
+    BUY_CAKE: ( cakesCount = 1)=> {
         return {
             type: CAKE_ACTION.BUY_CAKE,
-            payload: ''
+            payload: {
+                count: cakesCount
+            }
         }
     }
 
