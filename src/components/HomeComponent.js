@@ -15,6 +15,10 @@ class HomeComponent extends Component {
                 <Nav.Item>
                     <NavLink to='/reducer-component' className='nav-link text-dark'>Reducer Component</NavLink>
                 </Nav.Item>
+                <Nav.Item>
+                    <NavLink to='/Formik-Tutorial' className='nav-link text-dark'>Formik-Tutorial</NavLink>
+                </Nav.Item>
+                
 
                
                </Nav>

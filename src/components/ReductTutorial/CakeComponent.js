@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { Container, Card, Button , Badge, Row, Col, Form, InputGroup} from 'react-bootstrap'
 import { useSelector, useDispatch} from 'react-redux';
 import { CakeType } from '../../Redux/Reducers/CakeReducer/CakeType';
 import { IceCreamType } from '../../Redux/Reducers/IceCreamReducer/IceCreamType';
+import DisplayTasks from './DisplayTasks';
+
+
+
 
 const CakeComponent = () => {
 
@@ -10,7 +14,8 @@ const CakeComponent = () => {
     const {ClientIceCreamChosen,numOfIceCream} = useSelector((state) => state.ICECREAM_STATE);
     const Dispatch = useDispatch();
 
-  
+   //
+
     const [counterBuyer, setCounterBuyer] = useState({
         numofCakes: '',
         numOfIceCream:''
@@ -100,6 +105,10 @@ const CakeComponent = () => {
               </Card>
                   </Col>
               </Row>
+
+              <Container>
+                   <DisplayTasks/>
+              </Container>
 
 
              

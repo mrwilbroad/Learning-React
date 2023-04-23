@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
-input {
+input, textarea {
   box-shadow: none !important;
 }
+
+
