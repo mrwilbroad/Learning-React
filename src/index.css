@@ -12,8 +12,13 @@ code {
     monospace;
 }
 
-input, textarea {
+input, textarea , select{
   box-shadow: none !important;
 }
 
+
+.Registration textarea {
+  width: 500px;
+  min-height: 360px !important;
+}
 

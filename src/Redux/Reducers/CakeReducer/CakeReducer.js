@@ -8,6 +8,7 @@ const InitialCakeState = {
 
 
 const CakeReducer = (state = InitialCakeState, action)=> {
+    
     switch(action.type){
 
         case CAKE_ACTION.BUY_CAKE:

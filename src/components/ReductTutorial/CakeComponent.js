@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { Container, Card, Button , Badge, Row, Col, Form, InputGroup} from 'react-bootstrap'
 import { useSelector, useDispatch} from 'react-redux';
 import { CakeType } from '../../Redux/Reducers/CakeReducer/CakeType';
@@ -46,7 +46,7 @@ const CakeComponent = () => {
     <Container >
               <Row>
                   <Col>
-                  <Card className=' p-2'>
+                  <Card className='p-2'>
                 <Card.Body className='text-center border border-3 rounded border-primary'>
                     <p className='text-end'>
                     <Badge bg="primary" >{ClientCakeChoosen} Choosen Cakes</Badge>
