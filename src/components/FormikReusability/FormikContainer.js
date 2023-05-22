@@ -7,13 +7,28 @@ import FormikControl from './FormikControl'
 
 const FormikContainer = () => {
 
+  const dropdownOptions = [
+    {key: "Select an option", value:""},
+    {key: "option 1", value:"option1"},
+    {key: "option 2", value:"option2"},
+    {key: "option 3", value:"option3"},
+    {key: "option 4", value:"option4"},
+    {key: "option 5", value:"option5"},
+]
+
 const initialValues = {
-  'email': ""
+  email: "",
+  description: "",
+  Country: ''
 }
 const validationSchema = Yup.object({
   email: Yup.string()
             .required("Email Address is required")
             .email("Check your email")
+            .max(100,"Too long email address"),
+ description: Yup.string().required("Desription is required")
+                  .max(200,"Too long description"),
+ Country: Yup.string().required("country name is required")
 });
 
 const onsubmit = (values,onsubmitProps)=> {
@@ -31,17 +46,36 @@ const onsubmit = (values,onsubmitProps)=> {
                   onSubmit={onsubmit}>
                 {
                   (formik)=>(
-                    <Form>
+                    <Form method='POST'>
                       <Row>
-                        <Col lg={3}>
+                        <Col lg={3} md={6} sm={9}>
                           <section className='vstack gap-2'>
 
+                           <section>
                             <FormikControl 
-                            control="input"
-                            className="form-control form-control-sm"  
-                            type='text'
-                            autoComplete="email"
-                            label="Email" name="email"/>
+                              control="input"
+                              autoComplete="email"
+                              label="Email" 
+                              name="email"/>
+                           </section>
+
+                           <section>
+                            <FormikControl 
+                              control="textarea"
+                              autoComplete="message"
+                              label="Description" 
+                              name="description"/>
+                           </section>
+
+                           <section>
+                            <FormikControl 
+                              control="select"
+                              label="Country name"
+                              options={dropdownOptions}
+                              name="Country"/>
+                           </section>
+
+                           
 
                              <Button type='submit' variant="success" size="sm">
                               Submit</Button>

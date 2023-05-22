@@ -29,6 +29,12 @@ class HomeComponent extends Component {
                       Form-Container-Reusability
                     </NavLink>
                 </Nav.Item>
+
+                <Nav.Item>
+                    <NavLink to='/table-tutorial' className='nav-link text-dark'>
+                      Form-Container-Reusability
+                    </NavLink>
+                </Nav.Item>
                 
 
                
