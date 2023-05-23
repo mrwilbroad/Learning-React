@@ -32,7 +32,7 @@ class HomeComponent extends Component {
 
                 <Nav.Item>
                     <NavLink to='/table-tutorial' className='nav-link text-dark'>
-                      Form-Container-Reusability
+                      React Table 
                     </NavLink>
                 </Nav.Item>
                 

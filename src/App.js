@@ -12,6 +12,8 @@ import FirstStepRegistration from './components/MultistepRegistration/FirstStepR
 import SecondStepRegistration from './components/MultistepRegistration/SecondStepRegistration';
 import FormikContainer from './components/FormikReusability/FormikContainer';
 import ReacttableIntroduction from './components/TableTutorial/ReacttableIntroduction';
+import SortingTable from './components/TableTutorial/SortingTable';
+import FilteringTable from './components/TableTutorial/FilteringTable';
 
 
 
@@ -38,7 +40,9 @@ const  App =() =>{
 
           <Route path='formik-resulability' element={<FormikContainer/>}/>
 
-          <Route path='table-tutorial' element={<ReacttableIntroduction/>}/>
+          <Route path='/table-tutorial' element={<ReacttableIntroduction/>}/>
+          <Route path='/table-sorting' element={<SortingTable/>}/>
+          <Route path='/table-fitering' element={<FilteringTable/>}/>
         
     </Routes>
   );

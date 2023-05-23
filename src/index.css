@@ -22,3 +22,8 @@ input, textarea , select{
   min-height: 360px !important;
 }
 
+ table td:nth-child(1){
+  min-width: fit-content !important;
+  background-color: rgb(124, 245, 124);
+}
+
